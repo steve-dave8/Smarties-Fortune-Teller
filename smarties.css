@@ -1,0 +1,228 @@
+/* Elements */
+html {
+  min-height: 100vh;
+  background-color: #e6f0ff;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  text-decoration: underline;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.px-10 {
+  padding: 0 10px;
+}
+
+#smarties-wrapper {
+  min-height: 300px;
+  padding: 20px;
+  position: relative;
+  background-color: #f1f6ff;
+}
+#smarties-wrapper > .reveal {
+  opacity: 1;
+  transition: opacity 0.3s linear;
+}
+
+#smarties-fortune {
+  width: max-content;
+  padding: 20px 30px;
+  margin: 0 auto;
+  background-color: #e7f0d2;
+  opacity: 0;
+  font-style: italic;
+  font-size: 1.125rem;
+}
+
+#smarties-box {
+  position: absolute;
+  bottom: 20px;
+  width: 30vw;
+  max-width: 200px;
+  transform-origin: bottom right;
+}
+
+.smartie {
+  --box-ratio: 0.2;
+  max-width: calc(var(--box-ratio) * 200px);
+  max-height: calc(var(--box-ratio) * 200px);
+  width: calc(var(--box-ratio) * 30vw);
+  height: calc(var(--box-ratio) * 30vw);
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+  z-index: 2;
+}
+
+.init-position {
+  bottom: calc(20px + 30%);
+  left: min(230px, 20px + 31.6vw);
+  right: initial;
+}
+
+.smartie--red {
+  background-image: radial-gradient(at 70% 70%, #ff8080, #e60000 70%);
+}
+
+.smartie--blue {
+  background-image: radial-gradient(at 70% 70%, #809fff, #0039e6 70%);
+}
+
+.smartie--green {
+  background-image: radial-gradient(at 70% 70%, #9fdf9f, #39ac39 70%);
+}
+
+.smartie--orange {
+  background-image: radial-gradient(at 70% 70%, #ffb380, #e65c00 70%);
+}
+
+.smartie--purple {
+  background-image: radial-gradient(at 70% 70%, #df9fdf, #ac39ac 70%);
+}
+
+.smartie--pink {
+  background-image: radial-gradient(at 70% 70%, #ff80d5, #e60099 70%);
+}
+
+.smartie--yellow {
+  background-image: radial-gradient(at 70% 70%, #ffff80, #e6e600 70%);
+}
+
+.smartie--brown {
+  background-image: radial-gradient(at 70% 70%, #d9b38c, #963 70%);
+}
+
+.shake {
+  animation: shake 4s;
+}
+
+.bounce {
+  animation: slideX linear 3s forwards, bounce linear 2.25s forwards, spin linear 3s forwards;
+}
+
+#ground {
+  height: 2px;
+  background-color: #121212;
+  position: absolute;
+  bottom: 15px;
+  width: calc(100% - 40px);
+}
+
+/* Animations */
+@keyframes shake {
+  15% {
+    rotate: 25deg;
+  }
+  30% {
+    bottom: calc(20px + 30%);
+    translate: 0;
+  }
+  35% {
+    translate: 10px 10px;
+  }
+  40% {
+    translate: 0;
+  }
+  45% {
+    translate: 10px 10px;
+  }
+  50% {
+    translate: 0;
+  }
+  54% {
+    translate: 15px 15px;
+  }
+  58% {
+    translate: 0;
+  }
+  65% {
+    rotate: 25deg;
+    bottom: calc(20px + 30%);
+  }
+  80% {
+    rotate: 0;
+  }
+  100% {
+    bottom: 20px;
+  }
+}
+@keyframes slideX {
+  75% {
+    left: calc(min(230px, 20px + 31.6vw) + 40%);
+  }
+  100% {
+    left: calc(min(230px, 20px + 31.6vw) + 50%);
+  }
+}
+@keyframes bounce {
+  0% {
+    bottom: calc(20px + 30%);
+  }
+  10% {
+    bottom: calc(20px + 25%);
+  }
+  19% {
+    bottom: calc(20px + 20%);
+  }
+  27% {
+    bottom: calc(20px + 15%);
+  }
+  34% {
+    bottom: calc(20px + 10%);
+  }
+  40% {
+    bottom: calc(20px + 5%);
+  }
+  45% {
+    bottom: 20px;
+  }
+  52% {
+    bottom: calc(20px + 6%);
+  }
+  63% {
+    bottom: calc(20px + 11%);
+  }
+  72.5% {
+    bottom: calc(20px + 15%);
+  }
+  82% {
+    bottom: calc(20px + 11%);
+  }
+  93% {
+    bottom: calc(20px + 6%);
+  }
+  100% {
+    bottom: 20px;
+  }
+}
+@keyframes spin {
+  33.75% {
+    rotate: 1440deg;
+  }
+  75% {
+    rotate: 2520deg;
+  }
+  100% {
+    rotate: 3060deg;
+  }
+}
+/* Media Queries */
+@media screen and (max-width: 769px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+/*# sourceMappingURL=smarties.css.map */

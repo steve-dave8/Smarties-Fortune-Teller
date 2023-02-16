@@ -1,0 +1,15 @@
+{
+  "name": "smarties-fortune-teller",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile-css": "sass smarties.scss smarties.css",
+    "compile-ts": "tsc smarties.ts",
+    "watch-scss": "sass --watch smarties.scss smarties.css",
+    "watch-ts": "tsc -w smarties.ts"
+  },
+  "keywords": [],
+  "author": "Steven White",
+  "license": "ISC"
+}
